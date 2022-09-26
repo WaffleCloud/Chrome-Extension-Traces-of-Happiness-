@@ -1,0 +1,17 @@
+{
+    "name": "Leaving Happiness Everywhere We Go",
+    "description": "An extension that will leave happiness across the screen following the cursor's movements",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["styles.css"],
+            "js": ["content-script.js", "jquery-3.6.1.js"]
+        }
+    ],
+    "action":{
+        "default_popup": "popup.html"
+    },
+    "permissions": ["storage", "activeTab"]
+}
